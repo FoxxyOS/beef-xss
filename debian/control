@@ -1,0 +1,89 @@
+Source: beef-xss
+Section: web
+Priority: optional
+Maintainer: Lorenzo "Palinuro" Faletra <palinuro@foxxysec.org>
+Build-Depends: bundler,
+               debhelper (>= 9),
+               libsqlite3-dev,
+               libxml2-dev,
+               libxslt1-dev,
+               python,
+               thin,
+               ruby,
+               rubygems-integration,  
+               ruby-ansi,
+               ruby-dataobjects,
+               ruby-dev,
+               ruby-dm-core,
+               ruby-dm-migrations,
+               ruby-dm-sqlite-adapter,
+               ruby-em-websocket (>= 0.3.6),
+               ruby-erubis,
+               ruby-eventmachine,
+               ruby-execjs,
+               ruby-json,
+               ruby-msfrpc-client,
+               ruby-parseconfig,
+               ruby-rack,
+               ruby-zip (>= 1.0.0),
+               ruby-sinatra,
+               ruby-term-ansicolor,
+               ruby-therubyracer (>= 0.11.0beta1),
+               ruby-twitter,
+               ruby-uglifier (>= 2.2.1),
+               ruby-dm-serializer,
+               ruby-qr4r,
+               ruby-rubydns (>= 0.7.0),
+               ruby-geoip,
+               ruby-mime-types,
+Standards-Version: 3.9.4
+Homepage: http://beefproject.com/
+Vcs-Git: git://git.kali.org/packages/beef-xss.git
+
+Package: beef-xss
+Architecture: all
+Depends: adduser,
+         ruby | ruby-interpreter,
+         ${misc:Depends},
+         thin,
+         rubygems-integration,
+         ruby-ansi,
+         ruby-dataobjects,
+         ruby-dev,
+         ruby-dm-core,
+         ruby-dm-migrations,
+         ruby-dm-sqlite-adapter,
+         ruby-em-websocket (>= 0.3.6),
+         ruby-erubis,
+         ruby-eventmachine (>= 1.0.3),
+         ruby-execjs,
+         ruby-json,
+         ruby-msfrpc-client,
+         ruby-parseconfig,
+         ruby-rack (>= 1.4.1),
+         ruby-zip (>= 1.0.0),
+         ruby-sinatra (>= 1.4.2),
+         ruby-term-ansicolor,
+         ruby-therubyracer (>= 0.11.0beta1),
+         ruby-twitter,
+         ruby-uglifier (>= 2.2.1),
+         ruby-dm-serializer,
+         ruby-qr4r,
+         ruby-rubydns (>= 0.7.0),
+         ruby-geoip,
+         ruby-mime-types,
+         xdg-utils
+Breaks: kali-menu (<< 1.369)
+Conflicts: beef-xss-bundle
+Description: Browser Exploitation Framework (BeEF)
+ BeEF is short for The Browser Exploitation Framework. It is a penetration
+ testing tool that focuses on the web browser.
+ .
+ Amid growing concerns about web-born attacks against clients, including
+ mobile clients, BeEF allows the professional penetration tester to assess the
+ actual security posture of a target environment by using client-side attack
+ vectors. Unlike other security frameworks, BeEF looks past the hardened
+ network perimeter and client system, and examines exploitability within the
+ context of the one open door: the web browser. BeEF will hook one or more web
+ browsers and use them as beachheads for launching directed command modules and
+ further attacks against the system from within the browser context.

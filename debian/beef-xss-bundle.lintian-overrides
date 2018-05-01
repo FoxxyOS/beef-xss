@@ -1,0 +1,13 @@
+# Ignore everything that concerns the bundled gems
+script-not-executable usr/lib/beef-xss/bundle/*
+executable-not-elf-or-script usr/lib/beef-xss/bundle/*
+image-file-in-usr-lib usr/lib/beef-xss/bundle/*
+extra-license-file usr/lib/beef-xss/bundle/*
+package-contains-vcs-control-file usr/lib/beef-xss/bundle/*
+embedded-javascript-library usr/lib/beef-xss/bundle/*
+hardening-no-fortify-functions usr/lib/beef-xss/bundle/*
+interpreter-not-absolute usr/lib/beef-xss/bundle/*
+wrong-path-for-interpreter usr/lib/beef-xss/bundle/*
+ruby-script-but-no-ruby-dep usr/lib/beef-xss/bundle/ruby/*/bin/*
+missing-dep-for-interpreter rackup *usr/lib/beef-xss/bundle/*
+possible-gpl-code-linked-with-openssl

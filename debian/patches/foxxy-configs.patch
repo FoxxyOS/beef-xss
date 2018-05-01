@@ -1,0 +1,30 @@
+--- a/config.yaml
++++ b/config.yaml
+@@ -43,7 +43,7 @@ beef:
+ 
+         # DNS
+         dns_host: "localhost"
+-        dns_port: 53
++        dns_port: 5353
+ 
+         # Web Admin user interface URI
+         web_ui_basepath: "/ui"
+@@ -157,15 +157,15 @@ beef:
+         social_engineering:
+             enable: true
+         evasion:
+-            enable: false
++            enable: true
+         console:
+              shell:
+-                enable: false
++                enable: true
+         ipec:
+             enable: true
+         # this is still experimental..
+         dns:
+-            enable: true
++            enable: false
+         # this is still experimental..
+         dns_rebinding:
+             enable: false

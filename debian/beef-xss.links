@@ -1,0 +1,2 @@
+etc/beef-xss/config.yaml usr/share/beef-xss/config.yaml
+var/lib/beef-xss         usr/share/beef-xss/db

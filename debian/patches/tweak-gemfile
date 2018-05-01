@@ -1,0 +1,29 @@
+Description: Change specific versions in Gemfile
+Author: Sophie Brun <sophie@freexian.com>
+Bug: https://github.com/beefproject/beef/issues/1025
+Reviewed-by: Raphaël Hertzog <raphael@freexian.com>
+Last-Update: <2014-06-17>
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/Gemfile
++++ b/Gemfile
+@@ -10,8 +10,8 @@ gem 'eventmachine'
+ gem 'thin'
+ gem 'sinatra'
+ gem 'rack'
+-gem 'em-websocket', '~> 0.3.6' # WebSocket support
+-gem 'uglifier', '~> 2.2.1'
++gem 'em-websocket', '>= 0.3.6' # WebSocket support
++gem 'uglifier', '>= 2.2.1'
+ gem 'mime-types'
+ 
+ 
+@@ -22,7 +22,7 @@ if RUBY_PLATFORM.downcase.include?('mswi
+   gem 'execjs'
+   gem 'win32console'
+ elsif !RUBY_PLATFORM.downcase.include?('darwin')
+-  gem 'therubyracer', '0.11.3'
++  gem 'therubyracer', '>= 0.11.3'
+   gem 'execjs'
+ end
+  

@@ -1,0 +1,14 @@
+Description: Put database in /var/lib/beef-xss by default
+Author: Raphaël Hertzog <hertzog@debian.org>
+
+--- a/config.yaml
++++ b/config.yaml
+@@ -98,7 +98,7 @@ beef:
+         driver: "sqlite"
+ 
+         # db_file is only used for sqlite
+-        db_file: "beef.db"
++        db_file: "db/beef.db"
+ 
+         # db connection information is only used for mysql/postgres
+         db_host: "localhost"

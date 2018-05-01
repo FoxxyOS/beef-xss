@@ -1,0 +1,3 @@
+version=3
+
+https://github.com/beefproject/beef/tags .*/beef-(.*)\.tar\.gz

@@ -1,0 +1,10 @@
+*.pem	    usr/share/beef-xss/
+.bundle     usr/share/beef-xss/
+Gemfile*    usr/share/beef-xss/
+beef	    usr/share/beef-xss/
+config.yaml etc/beef-xss/
+arerules    usr/share/beef-xss/
+core	    usr/share/beef-xss/
+debian/scripts/beef-xss usr/bin/
+extensions  usr/share/beef-xss/
+modules     usr/share/beef-xss/

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "configure" ]; then
+    adduser --quiet --system beef-xss --group --home /var/lib/beef-xss
+    mkdir -p /var/lib/beef-xss
+    chown -R beef-xss:beef-xss /var/lib/beef-xss
+    chown -R beef-xss:beef-xss /usr/share/beef-xss/extensions/admin_ui/media/javascript-min
+fi
+
+#DEBHELPER#
+

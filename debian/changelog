@@ -1,0 +1,157 @@
+beef-xss (0.4.7.0-0foxxy3) testing; urgency=medium
+
+  * Increment version and rebuild to fix malformed config.yaml
+
+ -- Lorenzo "Palinuro" Faletra <palinuro@foxxysec.org>  Thu, 22 Dec 2016 15:39:06 +0100
+
+beef-xss (0.4.7.0-0foxxy2) testing; urgency=medium
+
+  * Disable DNS modules to prevent crashes at startup
+  * Enable additional useful modules
+
+ -- Lorenzo "Palinuro" Faletra <palinuro@localhost.localdomain>  Tue, 13 Dec 2016 20:55:20 +0100
+
+beef-xss (0.4.7.0-0foxxy1) testing; urgency=medium
+
+  * Rebuild on new build environment
+
+ -- Lorenzo "Palinuro" Faletra <palinuro@foxxysec.org>  Mon, 21 Nov 2016 00:21:42 +0100
+
+beef-xss (0.4.7.0-0foxxy0) testing; urgency=medium
+
+  * Import into Foxxy
+
+ -- Lorenzo "Palinuro" Faletra <palinuro@frozenbox.org>  Fri, 18 Mar 2016 12:28:11 +0100
+
+beef-xss (0.4.7.0-0kali2) kali-dev; urgency=medium
+
+  * Ensure LANG=C.UTF-8 when we run beef-xss. See
+    https://github.com/beefproject/beef/issues/1207
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Thu, 04 Feb 2016 09:21:11 +0100
+
+beef-xss (0.4.7.0-0kali1) kali-dev; urgency=medium
+
+  * Import new upstream release
+
+ -- Sophie Brun <sophie@freexian.com>  Mon, 04 Jan 2016 10:17:05 +0100
+
+beef-xss (0.4.6.1-0kali2) kali-dev; urgency=medium
+
+  * Improve the startup script.
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Tue, 28 Jul 2015 23:42:34 +0200
+
+beef-xss (0.4.6.1-0kali1) kali-dev; urgency=medium
+
+  * Import new upstream release 
+  * Add ruby-mime-types to depends and build-depends
+  * Refresh patches
+
+ -- Sophie Brun <sophie@freexian.com>  Thu, 16 Jul 2015 08:53:48 +0200
+
+beef-xss (0.4.5.1+git20150624-0kali1~r2u1) sana; urgency=medium
+
+  * Import new upstream release
+  * Refresh patches
+  * Update dependencies: add ruby-geoip, ruby-rubydns, rubyqr4r,
+    ruby-dm-serializer
+
+ -- Sophie Brun <sophie@freexian.com>  Wed, 24 Jun 2015 15:33:02 +0200
+
+beef-xss (0.4.4.9-0kali10) kali-dev; urgency=medium
+
+  * Disable dependency check, make it informative only (as ruby-twitter).
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Sat, 09 Aug 2014 15:30:52 +0200
+
+beef-xss (0.4.4.9-0kali9) kali-dev; urgency=medium
+
+  * Replace dependency ruby-rubyzip (kali-specific) with ruby-zip
+    (in Debian Jessie).
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Sat, 09 Aug 2014 12:01:21 +0200
+
+beef-xss (0.4.4.9-0kali8) kali; urgency=medium
+
+  * Disable bundler and add corresponding ruby* dependencies and build 
+    dependencies
+  * drop minimal version on build dependencies ruby-rack 
+  * Add in core/loader.rb the required gems 
+
+ -- Sophie Brun <sophie@freexian.com>  Fri, 13 Jun 2014 15:16:30 +0200
+
+beef-xss (0.4.4.9-0kali7) kali; urgency=medium
+
+  * Update debian/beef-xss.install accordingly...
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Tue, 06 May 2014 09:54:27 +0200
+
+beef-xss (0.4.4.9-0kali6) kali; urgency=medium
+
+  * Fix brown paper bug. Use debian/scripts/beef-xss instead of
+    debian/beef-xss as the latter needs to be free for use as a
+    temporary directory by debhelper.
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Tue, 06 May 2014 09:28:30 +0200
+
+beef-xss (0.4.4.9-0kali5) kali; urgency=medium
+
+  * Install /usr/bin/beef-xss instead of /usr/bin/beef already owned
+    by the "beef" package (FS #1136).
+  * Add "Breaks: kali-menu (<< 1.369)" so that we ensure that kali-menu
+    gets upgraded in lockstep.
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Mon, 05 May 2014 18:29:05 +0200
+
+beef-xss (0.4.4.9-0kali4) kali; urgency=medium
+
+  * Reset permissions in postinst configure so that a re-install
+    from config-files get proper permissions.
+  * Switch beef-xss to arch: any to avoid dependency problems
+    on arm* architectures where beef-xss-bundle currently doesn't build.
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Fri, 04 Apr 2014 16:28:34 +0200
+
+beef-xss (0.4.4.9-0kali3) kali; urgency=low
+
+  * Added Python as a missing build dependency
+
+ -- Mati Aharoni <muts@kali.org>  Thu, 27 Feb 2014 08:38:11 -0500
+
+beef-xss (0.4.4.9-0kali2) kali; urgency=low
+
+  * Fix permissions issue with minified js directory
+
+ -- Mati Aharoni <muts@kali.org>  Thu, 27 Feb 2014 01:19:45 -0500
+
+beef-xss (0.4.4.9-0kali1) kali; urgency=low
+
+  * Upstream import
+  * Introduction of the "beef" helper script
+
+ -- Mati Aharoni <muts@kali.org>  Wed, 26 Feb 2014 12:42:27 -0500
+
+beef-xss (0.4.4.5-0kali1) kali; urgency=low
+
+  * New upstream release.
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Mon, 10 Jun 2013 15:33:01 +0200
+
+beef-xss (0.4.4.1-0kali3) kali; urgency=low
+
+  * Fix build when building only the arch-any packages.
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Mon, 18 Feb 2013 17:02:01 +0100
+
+beef-xss (0.4.4.1-0kali2) kali; urgency=low
+
+  * Add missing ruby-dev build dependency.
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Mon, 18 Feb 2013 16:06:37 +0100
+
+beef-xss (0.4.4.1-0kali1) kali; urgency=low
+
+  * Initial release.
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Mon, 18 Feb 2013 15:43:47 +0100

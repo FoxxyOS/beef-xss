@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+overidde_dh_auto_clean:
+	rm -rf .bundle Gemfile.lock
+
+override_dh_auto_build:
+	echo -n "DEPENDENCY CHECK":
+	bundle install --local --no-cache --without test --path debian/gems && echo "OK" || echo "NOT OK"
+	rm -rf debian/gems
+
+override_dh_install:
+	dh_install --sourcedir=$$(pwd)
+	# Drop unwanted executable permissions
+	find debian/beef-xss/usr/share/beef-xss/modules \
+	     debian/beef-xss/usr/share/beef-xss/extensions \
+	     -type f -executable -print0 | \
+	     xargs -0 chmod -x
+	chmod 755 debian/beef-xss/usr/share/beef-xss/modules/exploits/rfi_scanner/update-list
+	chmod 755 debian/beef-xss/usr/share/beef-xss/modules/exploits/shell_shock_scanner/update-list
